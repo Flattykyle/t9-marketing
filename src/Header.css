@@ -1,0 +1,55 @@
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items: centre;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,1);
+}
+
+.logo-wrap{
+    display: flex;
+    align-items: centre;
+}
+
+.brand-title{
+    font-size: 1.5rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+}
+
+.nav a{
+    margin:0.1rem;
+    text-decoration: none;
+    color: grey;
+}  
+
+.cta {
+    background-color: #0d4ba7;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+/*mobile view*/
+@media(max-width: 768px){
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav a,
+    .nav.cta{
+        width: 100%;
+        text-align: centre;
+    }
+}
