@@ -1,5 +1,5 @@
 import React from "react";
-import "./DashboardLayout.css";
+import "../DashboardLayout.css";
 
 export default function DashboardLayout({children}) {
     return(
