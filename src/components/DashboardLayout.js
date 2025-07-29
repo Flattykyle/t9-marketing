@@ -4,6 +4,8 @@ import "../DashboardLayout.css";
 export default function DashboardLayout({children}) {
     const[isCollapsed, setIsCollapsed]= useState(false);
 
+    const toggleSidebar=()=>setIsCollapsed(!isCollapsed);
+
     return(
         <div className="dashboard-wrapper">
             {/* Sidebar*/}
@@ -17,6 +19,10 @@ export default function DashboardLayout({children}) {
                  <a href="#settings">Settings</a>
                 </nav>
             </aside>
+
+            {/*Background overlay(for mobile only)*/}
+            {isCollapsed && <div className="overlay"
+            onClick={toggleSidebar}></div>}
 
             {/* Main content*/}
             <div className="main">
