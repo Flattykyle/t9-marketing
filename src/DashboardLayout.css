@@ -38,6 +38,11 @@
     padding: 2rem 0.5rem;
 }
 
+.dashboard.collapsed.sidebar.logo {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 .dashboard.collapsed.sidebar nav a {
     text-align: centre;
     font-size: 0.85rem;
