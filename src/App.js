@@ -1,18 +1,16 @@
-import React, {useState} from "react";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import React from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 
 function App(){
-  const[isLogin, setIsLogin]=useState(true);
-
   return(
     <>
-     {isLogin ? (
-      <Login swithToSignup={()=>setIsLogin(false)}/>
-     ) : (
-      <Signup swithToLogin={()=> setIsLogin(true)}/>
-     )}
-      
+     <Header/>
+     <Hero/>
+     <Services/>
+     <Contact/>
     </>
   );
 }
