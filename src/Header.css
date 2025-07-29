@@ -52,4 +52,15 @@
         width: 100%;
         text-align: centre;
     }
+
+    .logo img {
+        max-height: 50px;
+        width: auto;
+    }
+
+    @media (max-width: 768px){
+        .logo img {
+            max-height: 35px;
+        }
+    }
 }
