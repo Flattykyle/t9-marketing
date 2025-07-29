@@ -7,7 +7,7 @@ export default function DashboardLayout({children}) {
     return(
         <div className="dashboard-wrapper">
             {/* Sidebar*/}
-            <aside className={'sidebar ${isCollapsed ? " collapsed " : ""}'}>
+            <aside className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
                 <h2 className="logo">{isCollapsed ? "T9" : "T9 Marketing"}</h2>
                 <nav>
                  <a href="#dashboard" className="active">Dashboard</a>
