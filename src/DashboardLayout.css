@@ -1,8 +1,9 @@
-.dashboard{
+.dashboard-wrapper {
     display: flex;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
+
 
 .sidebar {
     width: 220px;
@@ -33,19 +34,18 @@
 }
 
 /*Collapsed sidebar*/
-.dashboard.collapsed.sidebar{
-    width: 60px;
-    padding: 2rem 0.5rem;
+.sidebar.collapsed {
+    width: 70px; 
 }
 
-.dashboard.collapsed.sidebar.logo {
-    font-size: 1.2rem;
+.sidebar.collapsed .logo {
     text-align: center;
+    font-size: 1.2rem;
 }
 
-.dashboard.collapsed.sidebar nav a {
-    text-align: centre;
-    font-size: 0.85rem;
+.sidebar.collapsed nav a {
+    text-align: center;
+    padding-left: 0.7rem 0;
 }
 
 /*Main*/
@@ -56,22 +56,21 @@
     background: #f7f9fc;
 }
 
-/*Menu button*/
-.menu-btn {
-    background: #d32f2f;
-    border: none;
-    font-size: 1.4rem;
-    cursor: pointer;
-    margin-right: 1rem;
-}
-
 .topbar {
     display: flex;
     justify-content: space-between;
-    align-items: centre;
+    align-items: center;
     padding: 1rem 2rem;
     background: white;
     border-bottom: 1px solid #ddd;
+}
+
+/*Menu button*/
+.menu-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
 }
 
 .logout-btn {
@@ -88,24 +87,20 @@
 }
 
 @media(max-width: 768px){
-    .dashboard{
-        flex-direction: column;
-    }
-
     .sidebar {
-        position: absolute;
-        left: -250px;
+        position: fixed;
+        left: -220px;
         top: 0;
         height: 100vh;
         z-index: 1000;
     }
 
-    .dashboard.collapsed.sidebar {
+    .sidebar.collapsed {
         left: 0;
     }
 
     .main {
-        flex: 1;
+        margin-left: 0;
     }
 }
 

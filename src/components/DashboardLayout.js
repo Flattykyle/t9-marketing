@@ -5,10 +5,10 @@ export default function DashboardLayout({children}) {
     const[isCollapsed, setIsCollapsed]= useState(false);
 
     return(
-        <div className={'dashboard ${isCollapsed?" collapsed":""}'}>
+        <div className="dashboard-wrapper">
             {/* Sidebar*/}
-            <aside className="sidebar">
-                <h2 className="logo">T9 Marketing</h2>
+            <aside className={'sidebar ${isCollapsed ? " collapsed " : ""}'}>
+                <h2 className="logo">{isCollapsed ? "T9" : "T9 Marketing"}</h2>
                 <nav>
                  <a href="#dashboard" className="active">Dashboard</a>
                  <a href="#seo">SEO</a>
@@ -22,7 +22,8 @@ export default function DashboardLayout({children}) {
             <div className="main">
                 {/* Top Bar*/}
                 <header className="topbar">
-                    <button className="menu-btn" onClick={()=> setIsCollapsed(!isCollapsed)}>
+                    <button className="menu-btn" 
+                    onClick={()=> setIsCollapsed(!isCollapsed)}>
                         ☰
                     </button>
                     <span>Welcome, User!</span>
