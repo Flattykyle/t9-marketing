@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import "../DashboardLayout.css";
 
 export default function DashboardLayout({children}) {
+    const[isCollapsed, setIsCollapsed]= useState(false);
+
     return(
-        <div className="dashboard">
+        <div className={'dashboard ${isCollapsed?" collapsed":""}'}>
             {/* Sidebar*/}
             <aside className="sidebar">
                 <h2 className="logo">T9 Marketing</h2>
@@ -20,6 +22,9 @@ export default function DashboardLayout({children}) {
             <div className="main">
                 {/* Top Bar*/}
                 <header className="topbar">
+                    <button className="menu-btn" onClick={()=> setIsCollapsed(!isCollapsed)}>
+                        ☰
+                    </button>
                     <span>Welcome, User!</span>
                     <button className="logout-btn">Logout</button>
                 </header>
