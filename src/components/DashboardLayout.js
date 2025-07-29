@@ -12,14 +12,14 @@ export default function DashboardLayout({children}) {
             <aside className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
                 <h2 className="logo">{isCollapsed ? "T9" : "T9 Marketing"}</h2>
                 <nav>
-                 <a href="#dashboard" className="active">
+                 <a href="#dashboard" className="active"title="Dashboard">
                     {/*Dashboard Icon*/}
                     <svg viewBox="0 0 24 24"className="icon">
                         <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
                     </svg>
                     {!isCollapsed && "Dashboard"}
                  </a>
-                 <a href="#seo">
+                 <a href="#seo"title="SEO">
                     <svg viewBox="0 0 24 24"className="icon">
                         <path d="M15.5 14h-.79l-.28-.27A6.471 
               6.471 0 0016 9.5 6.5 6.5 0 
@@ -32,21 +32,21 @@ export default function DashboardLayout({children}) {
                     </svg>
                     {!isCollapsed && "SEO"}
                  </a>
-                 <a href="#content">
+                 <a href="#content"title="Content">
                     <svg viewBox="0 0 24 24"className="icon">
                         <path d="M3 4h18v2H3V4zm0 6h12v2H3v-2zm0 
               6h18v2H3v-2z"/>
                     </svg>
                     {!isCollapsed && "Content"}
                  </a>
-                 <a href="#billing">
+                 <a href="#billing"title="Billing">
                     <svg viewBox="0 0 24 24"className="icon">
                         <path d="M2 4v16h20V4H2zm18 
               14H4v-6h16v6zm0-8H4V6h16v4z"/>
                     </svg>
                     {!isCollapsed && "Billing"}
                  </a>
-                 <a href="#settings">
+                 <a href="#settings"title="Settings">
                     <svg viewBox="0 0 24 24"className="icon">
                         <path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.03-.66-.07-.98l2.11-1.65a.5.5 
               0 00.12-.63l-2-3.46a.5.5 

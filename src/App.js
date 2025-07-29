@@ -1,12 +1,19 @@
-import React from 'react';
-import DashboardLayout from './components/DashboardLayout';
+import React, {useState} from "react";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 function App(){
+  const[isLogin, setIsLogin]=useState(true);
+
   return(
-    <DashboardLayout>
-      <h1>Dashboard Home</h1>
-      <p>This is where analytics and client data will go.</p>
-    </DashboardLayout>
+    <>
+     {isLogin ? (
+      <Login swithToSignup={()=>setIsLogin(false)}/>
+     ) : (
+      <Signup swithToLogin={()=> setIsLogin(true)}/>
+     )}
+      
+    </>
   );
 }
 
