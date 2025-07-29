@@ -120,3 +120,15 @@
         display: block;
     }
 }
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.sidebar.collapsed .icon {
+    margin-right: 0;
+}
