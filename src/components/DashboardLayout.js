@@ -7,13 +7,13 @@ export default function DashboardLayout({children}) {
             {/* Sidebar*/}
             <aside className="sidebar">
                 <h2 className="logo">T9 Marketing</h2>
-             <nav>
-                <a href="#dashboard" className="active">Dashboard</a>
-                <a href="#seo">SEO</a>
-                <a href="#content">Content</a>
-                <a href="#billing">Billing</a>
-                <a href="#settings">Settings</a>
-             </nav>
+                <nav>
+                 <a href="#dashboard" className="active">Dashboard</a>
+                 <a href="#seo">SEO</a>
+                 <a href="#content">Content</a>
+                 <a href="#billing">Billing</a>
+                 <a href="#settings">Settings</a>
+                </nav>
             </aside>
 
             {/* Main content*/}
@@ -30,5 +30,5 @@ export default function DashboardLayout({children}) {
                 </main>
             </div>
         </div>
-    )
+    );
 }
