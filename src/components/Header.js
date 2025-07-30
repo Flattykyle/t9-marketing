@@ -11,15 +11,22 @@ export default function Header(){
         <div className="logo">
             <img src="/t9logo.jpg"alt="T9 Marketing"/>
         </div>
+
+        {/*Desktop menu*/}
+        <nav className="desktop-menu">
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="contact">Contact</a>
+        </nav>
+
+        {/*Mobile menu toggle*/}
+        <div className="menu-toggle"onClick={()=>setMenuOpen(!menuOpen)}>
+            ☰
+        </div>
        </header>
 
-       {/*Floating Menu Button*/}
-       <div className="menu-toggle"onClick={()=>setMenuOpen(!menuOpen)}>
-         ☰
-       </div>
-
-       {/*Sliding Navigation*/}
-       <nav className={menuOpen ? "open":""}>
+       {/*Mobile sliding menu*/}
+       <nav className={`mobile-menu ${menuOpen ? "open":""}`}>
         <a href="#hero"onClick={()=>setMenuOpen(false)}>Home</a>
         <a href="#services"onClick={()=>setMenuOpen(false)}>Services</a>
         <a href="#contact"onClick={()=>setMenuOpen(false)}>Contact</a>
