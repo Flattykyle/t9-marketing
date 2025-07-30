@@ -2,65 +2,63 @@
     display:flex;
     justify-content:space-between;
     align-items: centre;
-    padding: 1rem 2rem;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0,1);
+    background: #0d47a1;
+    padding: 0.8rem 1.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-.logo-wrap{
+.logo img {
+    max-height: 50px;
+    width: auto;
+}
+
+nav {
     display: flex;
-    align-items: centre;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 
-.brand-title{
-    font-size: 1.5rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: blue;
-}
-
-.nav a{
-    margin:0.1rem;
+nav a {
     text-decoration: none;
-    color: grey;
-}  
-
-.cta {
-    background-color: #0d4ba7;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
+    font-weight: 600;
+    white-space: nowrap;
 }
-/*mobile view*/
-@media(max-width: 768px){
-    .header{
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    .nav{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        margin-top: 10px;
-    }
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
 
-    .nav a,
-    .nav.cta{
-        width: 100%;
-        text-align: centre;
-    }
-
+@media (max-width:768px) {
     .logo img {
-        max-height: 50px;
-        width: auto;
+        max-width: 35px;
     }
 
-    @media (max-width: 768px){
-        .logo img {
-            max-height: 35px;
-        }
+    nav {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        background: #0d47a1;
+        width: 100%;
+        padding: 1rem 0;
+        transition: left 0.3s ease;
+        text-align: center;
+    }
+
+    nav.open {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 }
