@@ -19,7 +19,7 @@
 
 nav {
     display: flex;
-    gap: 1.2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -44,14 +44,18 @@ nav a {
 
     nav {
         position: absolute;
-        top: 60px;
+        top: 70px;
         left: -100%;
         flex-direction: column;
         background: #0d47a1;
         width: 100%;
-        padding: 1rem 0;
+        height: calc(100vh-70px);
+        padding-top: 2rem;
         transition: left 0.3s ease;
         text-align: center;
+        gap: 2rem;
+        font-size: 1.2rem;
+        z-index: 99;
     }
 
     nav.open {
