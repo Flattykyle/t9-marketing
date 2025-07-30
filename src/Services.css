@@ -1,93 +1,54 @@
 .sevices {
-    padding: 4rem 2rem;
-    background-color: white;
     text-align: center;
+    padding: 4rem 1rem;
+    background: #f7f9fc;
 }
-
-.services h3 {
-    font-size: 2.2rem;
-    color: blue;
+.services h2 {
+    font-size: 2rem;
+    color: #0d47a1;
     margin-bottom: 2rem;
-    font-family: 'Poppins',sans-serif;   
 }
 
-.service-cards{
+.service-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minimax(250px,1 fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 100px;
     margin: 0 auto;
 }
 
-.card {
+.service-card {
     background-color: #ffffff;
+    padding: 2rem 1rem;
     border-radius: 8px;
-    padding: 2rem 1.5rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1)
+.service-card:hover{
+    transform: translateY(-8px);
 }
 
-.card h4 {
-    font-size: 1.3rem;
-    color: #0d47a1;
-    margin-bottom: 0.8rem;
-    font-family:'Poppins', sans-serif;
-}
-
-.card p {
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
-}
-
-.icon{
+.service-card .icon {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.card.hidden{
-    opacity: 0;
-    transform: trnslateY(30px);
-    transition:opacity 0.6s ease, transform 0.6s ease;
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #0d47a1;
 }
 
-.card.show{
-    opacity: 1;
-    transform: translateY(0);
+.service-card p {
+    font-size: 1rem;
+    color: #555;
 }
 
-.learn-more{
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background: #0d47a1;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.learn-more:hover{
-    background: #1565c0;
-}
 
 @media (max-width: 768px){
     .service-cards{
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
-    .card{
-        padding: 1.5rem;
-    }
-
-    .learn-more{
-        width: 100%;
-    }
 }
