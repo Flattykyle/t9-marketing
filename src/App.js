@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
 
 function App(){
   return(
     <>
      <Header/>
-     <Hero/>
+     <section id="hero"style={{paddingTop:"100px",textAlign:"center"}}>
+      <h1>Welcome to T9 Marketing</h1>
+     </section>
     </>
   );
 }
