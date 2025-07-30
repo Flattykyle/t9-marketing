@@ -19,7 +19,8 @@ export default function Header(){
 
             {/*Navigation*/}
             <nav className={menuOpen ?"open":""}>
-             <a href="#hero"onClick={()=>setMenuOpen(false)}>Home</a>
+                {menuOpen && <div className="overlay"onClick={()=>setMenuOpen(false)}></div>}
+              <a href="#hero"onClick={()=>setMenuOpen(false)}>Home</a>
               <a href="#services"onClick={()=>setMenuOpen(false)}>Services</a>
               <a href="#contact"onClick={()=>setMenuOpen(false)}>Contact</a>
             </nav>
