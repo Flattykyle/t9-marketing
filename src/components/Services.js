@@ -28,6 +28,7 @@ return (
                     <div className="icon">{service.icon}</div>
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>
+                    <a href="#contact"className="learn-more">Learn More</a>
                 </div>
             ))}
         </div>
