@@ -1,5 +1,5 @@
 import React from "react";
-import "../SocialProof.css";
+import "./SocialProof.css";
 
 export default function SocialProof(){
     const testimonials=[
