@@ -1,4 +1,4 @@
-import React, {act, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import "../Header.css";
 
 export default function Header(){
@@ -14,8 +14,8 @@ export default function Header(){
         for(let section of sections) {
             const element=document.querySelector(section);
             if(element){
-            const top=Element.offsetTop-80;
-            const bottom=top + Element.offsetHeight;
+            const top=element.offsetTop-80;
+            const bottom=top + element.offsetHeight;
             if(window.scrollY>=top && window.scrollY <bottom) {
                 setActiveLink(section);
             }
@@ -52,7 +52,7 @@ export default function Header(){
          <nav className={`mobile-menu ${menuOpen ? "open":""}`}>
             <a href="#hero"onClick={()=>setMenuOpen(false)}>Home</a>
             <a href="#services"onClick={()=>setMenuOpen(false)}>Services</a>
-            <a href="social-proof"onClick={()=>setMenuOpen(false)}>Testimonials</a>
+            <a href="#social-proof"onClick={()=>setMenuOpen(false)}>Testimonials</a>
             <a href="#contact"onClick={()=>setMenuOpen(false)}>Contact</a>
          </nav>
 
