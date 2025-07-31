@@ -8,6 +8,12 @@
     top: 0;
     width: 100%;
     z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    padding: 0.5rem 1.5rem;
+    background: rgba(13, 17, 161, 0.95);
 }
 
 .logo img {
@@ -24,6 +30,11 @@
     color: white;
     text-decoration: none;
     font-weight: 600;
+    position: relative;
+}
+
+.desktop-menu a.active {
+    color: #ffca28;
 }
 
 .menu-toggle {
