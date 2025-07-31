@@ -40,9 +40,14 @@
 .menu-toggle {
     display: none;
     color: white;
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
+    padding: 0.5rem 0.8rem;
     z-index: 300;
+    background: #0d47a1;
+    border-radius: 4px;
+    border: none;
+    position: static;
 }
 
 .mobile-menu {
@@ -81,6 +86,7 @@
     background: rgba(0,0,0,0.5);
     z-index: 200;
 }
+
 
 @media (max-width:768px) {
     .desktop-menu {
