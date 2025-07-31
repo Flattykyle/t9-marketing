@@ -46,6 +46,17 @@
     background: #1976d2;
 }
 
+.confirmation {
+    background: #e6ffed;
+    color: #1b5e20;
+    border: 1px solid #1b5e20;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 @media (max-width:768px) {
     .contact-form {
         width: 100%;
